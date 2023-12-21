@@ -38,4 +38,33 @@ p {
     color: #34495e;
 }
 
-/* Add more styles here as per your design requirement */
+/* Media query for tablets */
+@media screen and (max-width: 768px) {
+    .coming-soon {
+        padding: 30px;
+        border-radius: 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+/* Media query for mobile phones */
+@media screen and (max-width: 480px) {
+    .coming-soon {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+}
