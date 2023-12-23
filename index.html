@@ -173,7 +173,7 @@
                 <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
                     <div class="col-lg-6">
                         
-                        <form id="contactForm" netlify>
+                        <form id="contactForm" action="/success.html" method="POST"  netlify>
                             <!-- Name input-->
                             <div class="form-floating mb-3">
                                 <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." required />
@@ -199,11 +199,7 @@
                                 <button class="btn btn-primary btn-xl" type="submit">Submit</button>
                             </div>
                         
-                            <div id="formMessages" class="d-none">
-                                <div id="successMessage" class="alert alert-success d-none">Thank you for contacting us!</div>
-                                <div id="errorMessage" class="alert alert-danger d-none">Oops! There was a problem submitting your form.</div>
-                            </div>
-
+                          
                         </form>
                     </div>
                 </div>
@@ -224,6 +220,6 @@
         <!-- * *                               SB Forms JS                               * *-->
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script src="js/scripts.js"></script>
     </body>
 </html>
