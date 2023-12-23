@@ -57,3 +57,24 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+document.getElementById('contactForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    fetch('/', {
+        method: 'POST',
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(new FormData(event.target)).toString()
+    })
+        .then(response => {
+            if (response.ok) {
+                document.getElementById('successMessage').classList.remove('d-none');
+                document.getElementById('errorMessage').classList.add('d-none');
+            } else {
+                throw new Error('Network response was not ok.');
+            }
+        })
+        .catch(error => {
+            document.getElementById('errorMessage').classList.remove('d-none');
+            document.getElementById('successMessage').classList.add('d-none');
+        });
+});
